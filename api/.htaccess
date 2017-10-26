@@ -1,0 +1,15 @@
+# Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine on
+
+# map neat URL to internal URL
+
+RewriteRule ^register/phone_number/$   RegisterController.php?view=register_number [nc,qsa]
+RewriteRule ^register/verification_code/$   RegisterController.php?view=verification_code [nc,qsa]
+RewriteRule ^register/verification_code/resend/$   RegisterController.php?view=verification_code_resend [nc,qsa]
+RewriteRule ^register/profile/$   RegisterController.php?view=profile [nc,qsa]
+RewriteRule ^register/testsms/$   RegisterController.php?view=test_sms [nc,qsa]
+
+RewriteRule ^contact/get/$   ContactController.php?view=get_contact [nc,qsa]
+
+RewriteRule ^chat/sync/$   ChatController.php?view=sync_chat [nc,qsa]
